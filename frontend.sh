@@ -16,7 +16,7 @@ systemctl start nginx
 rm -rf /usr/share/nginx/html*
 
 #Download the frontend content
-curl -o /tmp/frontend.zip https://roboshop.artifacts.s3.amazonaws.com/frontend.zip
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
 
 #Extract the frontend content
 cd /usr/share/nginx/html
