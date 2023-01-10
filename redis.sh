@@ -5,7 +5,7 @@ yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>>${log}
 status_check
 
 print_head "Enable Redis 6.2 from package streams"
-dnf module enable redis:remi6.2 -y &>>${log}
+dnf module enable redis:remi-6.2 -y &>>${log}
 status_check
 
 print_head "Install redis"
