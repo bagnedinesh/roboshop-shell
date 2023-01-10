@@ -11,6 +11,7 @@ print_head "Add application User"
 id roboshop &>>${log}
 print_head "id roboshop"
 if [ $? -ne 0 ]
+then
   print_head "id - $?"
   useradd roboshop &>>${log}
   print_head "user added"
