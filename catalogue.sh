@@ -11,6 +11,7 @@ print_head "Add application User"
 id roboshop &>>${log}
 if [ $? -ne 0 ]
   useradd roboshop &>>${log}
+  status_check
 fi
 status_check
 print_head "setup an app directory"
