@@ -8,3 +8,7 @@ status_check(){
   echo "Refer log file for more information Log - $log"
   fi
 }
+
+print_haed(){
+  echo -e "\e[35m  \e[0m"
+}
