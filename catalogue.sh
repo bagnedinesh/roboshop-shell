@@ -16,7 +16,6 @@ then
   useradd roboshop &>>${log}
   print_head "user added"
 fi
-print_head "Syntax error"
 status_check
 print_head "setup an app directory"
 mkdir -p /app &>>${log}

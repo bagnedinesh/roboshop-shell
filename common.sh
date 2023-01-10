@@ -1,4 +1,4 @@
-Script_Location=$(pwd)
+script_location=$(pwd)
 log=/tmp/roboshop.log
 status_check(){
   if [ $? -eq 0 ]
