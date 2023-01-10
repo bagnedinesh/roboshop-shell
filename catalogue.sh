@@ -9,10 +9,13 @@ yum install nodejs -y &>>${log}
 status_check
 print_head "Add application User"
 id roboshop &>>${log}
+print_head "id roboshop"
 if [ $? -ne 0 ]
+  print_head "id - $?"
   useradd roboshop &>>${log}
-  status_check
+  print_head "user added"
 fi
+print_head "Syntax error"
 status_check
 print_head "setup an app directory"
 mkdir -p /app &>>${log}
