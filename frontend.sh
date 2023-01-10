@@ -3,16 +3,7 @@
 #Developer has chosen Nginx as a web server and thus we will install Nginx Web Server
 
 #variable
-Script_Location=$(pwd)
-log=/tmp/roboshop.log
-status_check(){
-  if [ $? -eq 0 ]
-  then echo -e "\e[32mSUCCESS\e[0m"
-  else echo -e "\e[31mFAILURE\e[0m"
-  exit
-  echo "Refer log file for more information Log - $log"
-  fi
-}
+source common.sh
 
 echo -e "\e[35m Install Nginx \e[0m"
 yum install nginx -y &>>${log}
