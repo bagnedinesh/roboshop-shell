@@ -53,13 +53,15 @@ NODEJS(){
   systemctl start ${component} &>>${log}
   status_check
 
-  print_head "setup MongoDB repo"
-  cp ${script_location}/files/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log}
-  status_check
-  print_head "install mongodb-client"
-  yum install mongodb-org-shell -y &>>${log}
-  status_check
-  print_head "Load Schema"
-  mongo --host mongodb-dev.dineshbagne.tech </app/schema/${component}.js &>>${log}
-  status_check
+if [ ${load_schema} == "true" ]; then
+    print_head "setup MongoDB repo"
+    cp ${script_location}/files/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log}
+    status_check
+    print_head "install mongodb-client"
+    yum install mongodb-org-shell -y &>>${log}
+    status_check
+    print_head "Load Schema"
+    mongo --host mongodb-dev.dineshbagne.tech </app/schema/${component}.js &>>${log}
+    status_check
+  fi
 }
