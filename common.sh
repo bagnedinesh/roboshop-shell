@@ -9,6 +9,6 @@ status_check(){
   fi
 }
 
-print_haed(){
+print_head(){
   echo -e "\e[35m $1 \e[0m"
 }

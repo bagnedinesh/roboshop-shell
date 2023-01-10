@@ -5,7 +5,7 @@
 #variable
 source common.sh
 
-print_haed "Install Nginx"
+print_head "Install Nginx"
 yum install nginx -y &>>${log}
 status_check
 
