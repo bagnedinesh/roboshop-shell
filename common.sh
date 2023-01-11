@@ -151,7 +151,7 @@ PYTHON() {
 
 GOLANG(){
   print_head "Install golang"
-  yum yum install golang -y &>>${log}
+  yum install golang -y &>>${log}
   status_check
 
   APP_PREREQ
