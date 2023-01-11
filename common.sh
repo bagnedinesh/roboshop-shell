@@ -79,7 +79,7 @@ LOAD_SCHEMA() {
       status_check
 
       print_head "Load Schema"
-      mysql -h mysql-dev.devopsb70.online -uroot -p${root_mysql_password} < /app/schema/shipping.sql  &>>${log}
+      mysql -h mysql-dev.dineshbagne.tech -uroot -p${root_mysql_password} < /app/schema/shipping.sql  &>>${log}
       status_check
     fi
 
