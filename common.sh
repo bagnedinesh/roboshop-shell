@@ -68,7 +68,7 @@ LOAD_SCHEMA() {
       status_check
 
       print_head "Load Schema"
-      mongo --host mongodb-dev.devopsb70.online </app/schema/${component}.js &>>${log}
+      mongo --host mongodb-dev.dineshbagne.tech </app/schema/${component}.js &>>${log}
       status_check
     fi
 
