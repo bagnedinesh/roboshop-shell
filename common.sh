@@ -162,5 +162,9 @@ GOLANG(){
   go get &>>${log}
   go build &>>${log}
 
+  print_head "Update Passwords in disppatch service File"
+  sed -i -e "s/roboshop_dispatch_password/${roboshop_dispatch_password}/" ${script_location}/files/${component}.service  &>>${log}
+  status_check
+
   SYSTEMD_SETUP
 }
