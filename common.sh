@@ -148,3 +148,19 @@ PYTHON() {
   SYSTEMD_SETUP
 
 }
+
+GOLANG(){
+  print_head "Install golang"
+  yum yum install golang -y &>>${log}
+  status_check
+
+  APP_PREREQ
+
+  print_head "download the dependencies & build the software"
+  cd /app
+  go mod init dispatch &>>${log}
+  go get &>>${log}
+  go build &>>${log}
+
+  SYSTEMD_SETUP
+}
